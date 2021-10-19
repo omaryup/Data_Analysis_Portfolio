@@ -13,4 +13,3 @@
 - The program will also create plots for the new columns created (simple return and log return)
 - For visualization purposes, some additional items are printed at the end
 
-**As of 10/19/21 this program is still in progress.**
