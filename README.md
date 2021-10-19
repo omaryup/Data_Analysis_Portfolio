@@ -2,7 +2,7 @@
 - :dart: This is a portfolio created to display my technical and visualization skills on Python, SQL and more.
 # "Financial_Data.py" 
 
-**The file shows a quick program I wrote to obtain financial data from yahoo finance using Python, pandas, matplotlib, numpy and more.**
+**The file shows a quick program I wrote to obtain financial data from Yahoo Finance using Python, pandas, matplotlib, numpy and more.**
 
 - The intention is for user to enter a valid ticker (verified by a function that only accepts alphabetical characters)
 - Followed by user input for both start and end date (user must follow the Y-M-D format)
