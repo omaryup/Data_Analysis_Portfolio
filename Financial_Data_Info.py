@@ -1,4 +1,3 @@
-
 import pandas as pd
 import numpy as np
 import yfinance as yf
@@ -118,7 +117,6 @@ print("\n")
 print(df.columns)
 print("\n")
 print(df.index)
-print("\n")
 print("\n")
 print(us_dept_treas_2021[1])
 print("\n")
