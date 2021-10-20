@@ -1,3 +1,4 @@
+
 import pandas as pd
 import numpy as np
 import yfinance as yf
@@ -56,7 +57,6 @@ major_holders = yf_ticker.major_holders
 inst_holders = yf_ticker.institutional_holders
 recommendation = yf_ticker.recommendations
 
-
 #Turn data into DataFrame using Pandas
 df = pd.DataFrame(data)
 df.rename(columns={'Adj Close':'adj_close'}, inplace=True)
@@ -94,6 +94,15 @@ plt.legend()
 plt.show()
 
 
+#Daily Yield curve
+plt.figure(figsize=(12, 10))
+us_dept_treas_2021 = pd.read_html("https://www.treasury.gov/resource-center/data-chart-center/interest-rates/pages/TextView.aspx?data=yieldYear&year=2021")
+us_dept_treas_month = pd.read_html("https://www.treasury.gov/resource-center/data-chart-center/interest-rates/pages/TextView.aspx?data=yield")
+us_dept_treas_2021[1].plot()
+us_dept_treas_month[1].plot()
+plt.legend()
+plt.show()
+
 #Printing
 print("\n")
 print(df.head(10))
@@ -110,3 +119,7 @@ print(df.columns)
 print("\n")
 print(df.index)
 print("\n")
+print("\n")
+print(us_dept_treas_2021[1])
+print("\n")
+print(us_dept_treas_month[1])
