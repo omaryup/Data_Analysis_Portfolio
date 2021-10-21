@@ -12,4 +12,5 @@
 - The program will then continue output major institutional holders and recommendations for the ticker/stock provided, followed by line charts for all values in DataFrame created
 - The program will also create plots for the new columns created (simple return and log return)
 - For visualization purposes, some additional items are printed at the end
+https://user-images.githubusercontent.com/23235947/138312735-1de7b756-ec3d-4c51-9c18-1354dccb1d8b.mp4
 
