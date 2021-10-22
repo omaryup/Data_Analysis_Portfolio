@@ -9,9 +9,11 @@
 - Additionally, the program will create a DataFrame for the first 10 rows of data obtained and perform two quick calculations based on adjusted return
   - Simple return is then calculated using numpy (as percentage change)
   - Then, log return is calculated using numpy as the division between adj_close and prior adj_close values
-- The program will then continue output major institutional holders and recommendations for the ticker/stock provided, followed by line charts for all values in DataFrame created
-- The program will also create plots for the new columns created (simple return and log return)
-- For visualization purposes, some additional items are printed at the end
+- :page_facing_up: The program will then continue output major institutional holders and recommendations for the ticker/stock provided, followed by line charts for all values in DataFrame created
+- :chart_with_upwards_trend: The program will also create plots for the new columns created (simple return and log return)
+
+- Additional:
+  - :chart_with_upwards_trend: At the end, the program will also display a visualization of daily yield curve rates for 2021 and the month of October.
 
 https://user-images.githubusercontent.com/23235947/138500696-0b1646ac-9042-4ac8-83a7-d33f0a3871f7.mp4
 
