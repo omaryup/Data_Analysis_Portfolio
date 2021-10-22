@@ -14,5 +14,4 @@
 - For visualization purposes, some additional items are printed at the end
 
 
-https://user-images.githubusercontent.com/23235947/138312735-1de7b756-ec3d-4c51-9c18-1354dccb1d8b.mp4
 
