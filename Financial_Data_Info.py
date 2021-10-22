@@ -3,6 +3,7 @@ import numpy as np
 import yfinance as yf
 from matplotlib import pyplot as plt
 from datetime import datetime
+from matplotlib.dates import MonthLocator
 import seaborn as sns
 
 #Set-up environment
@@ -67,6 +68,8 @@ df.index.names = ['Dates'] #renames the index
 df['simple_rtn'] = df.adj_close.pct_change()
 df['log_rtn'] = np.log(df.adj_close/df.adj_close.shift(1))
 
+recom_count = recommendation['To Grade'].value_counts()
+
 
 #Plots and Graphs
 df.plot(figsize = (24, 12), subplots = True)
@@ -93,13 +96,31 @@ plt.legend()
 plt.show()
 
 
-#Daily Yield curve
-plt.figure(figsize=(12, 10))
-us_dept_treas_2021 = pd.read_html("https://www.treasury.gov/resource-center/data-chart-center/interest-rates/pages/TextView.aspx?data=yieldYear&year=2021")
-us_dept_treas_month = pd.read_html("https://www.treasury.gov/resource-center/data-chart-center/interest-rates/pages/TextView.aspx?data=yield")
-us_dept_treas_2021[1].plot()
-us_dept_treas_month[1].plot()
-plt.legend()
+#Daily Treasury Yield curverates
+
+#creating dataframe from urls
+treas_2021 = pd.read_html("https://www.treasury.gov/resource-center/data-chart-center/interest-rates/pages/TextView.aspx?data=yieldYear&year=2021", header=0, index_col=0)[1] #we use header and index col to crate Date and col index for dataframe
+treas_month = pd.read_html("https://www.treasury.gov/resource-center/data-chart-center/interest-rates/pages/TextView.aspx?data=yield", header=0, index_col=0)[1] #we use header and index col to crate Date and col index for dataframe
+
+#plotting for 2021
+fig, ax1 = plt.subplots(figsize=(25, 15))
+ax1.plot(treas_2021)
+ax1.set_title('Daily Treasury Yield Curves Rates for 2021')
+ax1.xaxis.set_major_locator(MonthLocator())
+plt.xticks(rotation=30)
+plt.legend(treas_2021.columns, bbox_to_anchor=(1.06, 1), loc = 'upper right')
+ax1.set_ylabel('Yield rates')
+ax1.set_xlabel('Date')
+plt.show()
+
+#plotting for month
+fig, ax2 = plt.subplots(figsize=(25, 15))
+ax2.plot(treas_month)
+ax2.set_title('Daily Treasury Yield Curves Rates for October')
+plt.xticks(rotation=30)
+plt.legend(treas_month.columns, bbox_to_anchor=(1.06, 1), loc = 'upper right')
+ax2.set_ylabel('Yield rates')
+ax2.set_ylabel('Date')
 plt.show()
 
 #Printing
@@ -109,15 +130,16 @@ print(df.head(10))
 print("\n")
 print(inst_holders)
 print("\n")
-print(recommendation)
+print(recommendation.head())
 print("\n")
-print(recommendation['To Grade'].value_counts())
+print(recom_count)
+
+print(treas_2021.head())
+print("\n")
+print(treas_month)
 
 print("\n")
 print(df.columns)
 print("\n")
 print(df.index)
 print("\n")
-print(us_dept_treas_2021[1])
-print("\n")
-print(us_dept_treas_month[1])
