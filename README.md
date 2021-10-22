@@ -13,5 +13,5 @@
 - The program will also create plots for the new columns created (simple return and log return)
 - For visualization purposes, some additional items are printed at the end
 
-
+https://user-images.githubusercontent.com/23235947/138500696-0b1646ac-9042-4ac8-83a7-d33f0a3871f7.mp4
 
