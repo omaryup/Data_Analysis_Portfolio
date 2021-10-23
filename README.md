@@ -1,6 +1,6 @@
 - 👋 Hi, and welcome!
 - :dart: This is a portfolio created to display my technical and visualization skills on Python, SQL and more.
-# "Financial_Data_and_Treasury_Yield_Rates_info.py" 
+# "Financial_Data_info.py" 
 
 **This is a program I wrote to obtain financial data from Yahoo Finance using Python, pandas, matplotlib, numpy and more.**
 
