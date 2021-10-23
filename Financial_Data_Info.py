@@ -45,6 +45,7 @@ def get_end_date(input):
         except ValueError:
             print("This is the incorrect date format. It should be YYYY-mm-dd")
 
+#Calling functions defined above
 ticker = get_ticker(input)
 start_date = get_start_date(input)
 end_date = get_end_date(input)
@@ -57,7 +58,7 @@ major_holders = yf_ticker.major_holders
 inst_holders = yf_ticker.institutional_holders
 recommendation = yf_ticker.recommendations
 
-#Turn data into DataFrame using Pandas
+#Converting downloaded data to DataFrame using Pandas
 df = pd.DataFrame(data)
 df.rename(columns={'Adj Close':'adj_close'}, inplace=True)
 new_col = ['Open', 'High', 'Low', 'Close', 'Volume', 'adj_close', 'simple_rtn', 'log_rtn'] #change position of adj_close
@@ -76,14 +77,12 @@ df.plot(figsize = (24, 12), subplots = True)
 plt.legend()
 plt.show()
 
-
 plt.figure(figsize=(12, 10))
 ax = plt.subplot(1,1,1)
 df['adj_close'].plot()
 ax.set(title = ticker + ' time series', xlabel = 'Date', ylabel = 'Stock price ($)')
 plt.legend()
 plt.show()
-
 
 plt.figure(figsize=(12, 10))
 df['simple_rtn'].plot(figsize = (12, 10))
@@ -98,7 +97,7 @@ plt.show()
 
 #Daily Treasury Yield curverates
 
-#creating dataframe from urls
+#creating dataframe from US Treas urls
 treas_2021 = pd.read_html("https://www.treasury.gov/resource-center/data-chart-center/interest-rates/pages/TextView.aspx?data=yieldYear&year=2021", header=0, index_col=0)[1] #we use header and index col to crate Date and col index for dataframe
 treas_month = pd.read_html("https://www.treasury.gov/resource-center/data-chart-center/interest-rates/pages/TextView.aspx?data=yield", header=0, index_col=0)[1] #we use header and index col to crate Date and col index for dataframe
 
@@ -120,7 +119,7 @@ ax2.set_title('Daily Treasury Yield Curves Rates for October')
 plt.xticks(rotation=30)
 plt.legend(treas_month.columns, bbox_to_anchor=(1.06, 1), loc = 'upper right')
 ax2.set_ylabel('Yield rates')
-ax2.set_ylabel('Date')
+ax2.set_xlabel('Date')
 plt.show()
 
 #Printing
