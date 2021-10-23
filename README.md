@@ -13,7 +13,7 @@
 - :chart_with_upwards_trend: The program will also create plots for the new columns created (simple return and log return)
 
 - Additional:
-  - :chart_with_upwards_trend: At the end, the program will also display a visualization of daily yield curve rates for 2021 and the month of October. This information is obtained by doing webscraping on the U.S. Departmen of Treasury using Pandas.
+  - :chart_with_upwards_trend: At the end, the program will also display a visualization of daily YIELD CURVE RATES for 2021 and the month of October. This information is obtained by doing webscraping on the U.S. Departmen of Treasury using Pandas.
 
 https://user-images.githubusercontent.com/23235947/138500696-0b1646ac-9042-4ac8-83a7-d33f0a3871f7.mp4
 
