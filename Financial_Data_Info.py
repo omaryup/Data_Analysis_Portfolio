@@ -67,13 +67,11 @@ df.index.names = ['Dates'] #renames the index
 
 
 stock_info = yf_ticker.info
+df_stock_info = pd.DataFrame(stock_info.items(), columns=['Description', 'Details']) #all stock info
 
 income_statement_a = yf_ticker.financials
 balance_sheet_a = yf_ticker.balance_sheet
 cash_flow_a = yf_ticker.cashflow
-
-df_stock_info = pd.DataFrame(stock_info.items(), columns=['Description', 'Details']) #all stock info
-
 
 #Calculations added to DataFrame
 df['simple_rtn'] = df.adj_close.pct_change()
