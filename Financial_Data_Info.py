@@ -67,6 +67,7 @@ df.index.names = ['Dates'] #renames the index
 
 
 stock_info = yf_ticker.info
+
 income_statement_a = yf_ticker.financials
 balance_sheet_a = yf_ticker.balance_sheet
 cash_flow_a = yf_ticker.cashflow
