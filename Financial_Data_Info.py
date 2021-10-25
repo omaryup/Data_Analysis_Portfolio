@@ -52,7 +52,7 @@ end_date = get_end_date(input)
 
 #yfinance variables
 yf_ticker = yf.Ticker(ticker)
-data = yf.download(tickers = ticker, start = start_date,end = end_date, group_by = 'ticker', progress=False)
+data = yf.download(tickers = ticker, start = start_date,end = end_date, group_by = 'ticker', actions = True, progress=False)
 
 major_holders = yf_ticker.major_holders
 inst_holders = yf_ticker.institutional_holders
@@ -64,6 +64,15 @@ df.rename(columns={'Adj Close':'adj_close'}, inplace=True)
 new_col = ['Open', 'High', 'Low', 'Close', 'Volume', 'adj_close', 'simple_rtn', 'log_rtn'] #change position of adj_close
 df = df.reindex(columns=new_col)
 df.index.names = ['Dates'] #renames the index
+
+
+stock_info = yf_ticker.info
+income_statement_a = yf_ticker.financials
+balance_sheet_a = yf_ticker.balance_sheet
+cash_flow_a = yf_ticker.cashflow
+
+df_stock_info = pd.DataFrame(stock_info.items(), columns=['Description', 'Details']) #all stock info
+
 
 #Calculations added to DataFrame
 df['simple_rtn'] = df.adj_close.pct_change()
@@ -124,21 +133,22 @@ plt.show()
 
 #Printing
 print("\n")
-print(df.head(10))
-
+print(df.head(10)) #dataset
 print("\n")
-print(inst_holders)
+print(inst_holders) #dataset
 print("\n")
-print(recommendation.head())
+print(recommendation.head()) #dataset
 print("\n")
-print(recom_count)
-
-print(treas_2021.head())
+print(recom_count) #dataset
 print("\n")
-print(treas_month)
-
+print(treas_2021.head()) #dataset
 print("\n")
-print(df.columns)
+print(treas_month) #dataset
 print("\n")
-print(df.index)
+print(df_stock_info) #dataset
 print("\n")
+print(income_statement_a) #dataset
+print("\n")
+print(balance_sheet_a) #dataset
+print("\n")
+print(cash_flow_a) #dataset
