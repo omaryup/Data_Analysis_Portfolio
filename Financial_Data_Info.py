@@ -123,7 +123,7 @@ plt.show()
 #plotting for month
 fig, ax2 = plt.subplots(figsize=(25, 15))
 ax2.plot(treas_month)
-ax2.set_title('Daily Treasury Yield Curves Rates for October')
+ax2.set_title('Daily Treasury Yield Curves Rates for Current Month')
 plt.xticks(rotation=30)
 plt.legend(treas_month.columns, bbox_to_anchor=(1.06, 1), loc = 'upper right')
 ax2.set_ylabel('Yield rates')
