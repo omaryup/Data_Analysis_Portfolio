@@ -32,4 +32,5 @@ https://user-images.githubusercontent.com/23235947/139759192-da1bb3d6-2093-47ff-
 
 - In this next section, we can see that we are only selecting the latest reports. For this comapny in particular, we see the most recent annual report (before 2021) was released in Oct 2020.
 
-![Ssms_GYXUfr5ElV](https://user-images.githubusercontent.com/23235947/140809409-6a709099-95b5-4b9b-b7fb-69720ceef08e.png)
+![Ssms_1xf6VGDH7b](https://user-images.githubusercontent.com/23235947/140814154-bdbd9284-5e57-4a07-97bd-a5ce498c4303.png)
+
