@@ -21,4 +21,5 @@ https://user-images.githubusercontent.com/23235947/139759192-da1bb3d6-2093-47ff-
 
 **In this section, the SQL script will be used to manipulate data previously loaded into SQL Server using excel files.**
 
-## "Visualizing all tables in Database" 
+### Visualizing all tables in Database
+![Ssms_qKzSFNmDjs](https://user-images.githubusercontent.com/23235947/140806980-1d792476-d7c0-44d8-a61b-757dd0b5ac86.png)
