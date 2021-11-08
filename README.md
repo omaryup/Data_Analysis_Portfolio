@@ -18,3 +18,7 @@
 https://user-images.githubusercontent.com/23235947/139759192-da1bb3d6-2093-47ff-967f-5fde5a34c0e1.mp4
 
 # "Semiconductor_financials_compare.sql" 
+
+**In this section, the SQL script will be used to manipulate data previously loaded into SQL Server using excel files.**
+
+## "Visualizing all tables in Database" 
