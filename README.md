@@ -27,3 +27,9 @@ https://user-images.githubusercontent.com/23235947/139759192-da1bb3d6-2093-47ff-
 - The intention of the query is to consolidate the data by year and construct a new table using fundamental analysis to obtain key stats in the industry.
 
 ![Ssms_qKzSFNmDjs](https://user-images.githubusercontent.com/23235947/140806980-1d792476-d7c0-44d8-a61b-757dd0b5ac86.png)
+
+### Visualizing all tables in Database
+
+- In this next section, we can see that we are only selecting the latest reports. For this comapny in particular, we see the most recent annual report (before 2021) was released in Oct 2020.
+
+![Ssms_GYXUfr5ElV](https://user-images.githubusercontent.com/23235947/140809409-6a709099-95b5-4b9b-b7fb-69720ceef08e.png)
