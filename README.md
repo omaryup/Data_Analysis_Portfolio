@@ -22,4 +22,8 @@ https://user-images.githubusercontent.com/23235947/139759192-da1bb3d6-2093-47ff-
 **In this section, the SQL script will be used to manipulate data previously loaded into SQL Server using excel files.**
 
 ### Visualizing all tables in Database
+
+- We can see this Database contains the main Financial Statements for a total of 6 public companies in the Semiconductor industry.
+- The intention of the query is to consolidate the data by year and construct a new table using fundamental analysis to obtain key stats in the industry.
+
 ![Ssms_qKzSFNmDjs](https://user-images.githubusercontent.com/23235947/140806980-1d792476-d7c0-44d8-a61b-757dd0b5ac86.png)
