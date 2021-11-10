@@ -38,14 +38,14 @@ https://user-images.githubusercontent.com/23235947/139759192-da1bb3d6-2093-47ff-
 
 ![Ssms_qKzSFNmDjs](https://user-images.githubusercontent.com/23235947/140806980-1d792476-d7c0-44d8-a61b-757dd0b5ac86.png)
 
-### Visualizing all tables in Database
+###🔍Visualizing all tables in Database
 
 - In this next section, we can see that we are only selecting the latest reports. For this comapny in particular, we see the most recent annual report (before 2021) was released in Oct 2020.
 
 ![Ssms_1xf6VGDH7b](https://user-images.githubusercontent.com/23235947/140814154-bdbd9284-5e57-4a07-97bd-a5ce498c4303.png)
 
 
-# "BRD 1947 - PRESENT (TABLEAU)" 
+#📊 "BRD 1947 - PRESENT (TABLEAU)" 
 
 **The intention of this analysis is for investors to have a clear understanding of how the investment in debt securities has changed over time since 1947. The data source for this project was imported from an excel file with over 12k rows of data obtained from the World Bank Database.**
 
