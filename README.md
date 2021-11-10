@@ -37,6 +37,6 @@ https://user-images.githubusercontent.com/23235947/139759192-da1bb3d6-2093-47ff-
 
 # "BRD 1947 - PRESENT (TABLEAU)" 
 
-**The intention of this analysis is for investors to have a clear understanding of how the investment in debt securities has changed over time since 1947.**
+**The intention of this analysis is for investors to have a clear understanding of how the investment in debt securities has changed over time since 1947. The data source for this project was imported from an excel file with over 12k rows of data obtained from the World Bank Database.**
 
 ![tabpublic_wJaXu5dqS6](https://user-images.githubusercontent.com/23235947/141040871-0853367d-6592-47d8-88b5-22864f149b41.png)
