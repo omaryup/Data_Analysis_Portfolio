@@ -34,3 +34,9 @@ https://user-images.githubusercontent.com/23235947/139759192-da1bb3d6-2093-47ff-
 
 ![Ssms_1xf6VGDH7b](https://user-images.githubusercontent.com/23235947/140814154-bdbd9284-5e57-4a07-97bd-a5ce498c4303.png)
 
+
+# "BRD 1947 - PRESENT (TABLEAU)" 
+
+**The intention of this analysis is for investors to have a clear understanding of how the investment in debt securities has changed over time since 1947.**
+
+![tabpublic_wJaXu5dqS6](https://user-images.githubusercontent.com/23235947/141040871-0853367d-6592-47d8-88b5-22864f149b41.png)
