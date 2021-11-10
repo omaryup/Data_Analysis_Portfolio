@@ -8,7 +8,7 @@
 
 (*) Fun fact about myself: I love stargazing, and I am a self-taught drummer.
 
-                              :dart: This is a portfolio created to display my technical and visualization skills on Python, SQL and Tableau.
+:dart: This is a portfolio created to display my technical and visualization skills on Python, SQL and Tableau.
 # "Financial_Data_Info.py" 
 
 **This is a program I wrote to obtain financial data from Yahoo Finance using Python, pandas, matplotlib, numpy and more.**
