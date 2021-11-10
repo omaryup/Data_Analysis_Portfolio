@@ -4,7 +4,9 @@
 
 (*) I am highly interested in pursuing a career in Data and passionate about technology, and its applications to finance. 
 
-(*) I graduated Cum Laude in 2018 and I am super interested in Data Analytics roles focused on the Financial Industry. Fun fact: I love stargazing, and I am a self-taught drummer.
+(*) I graduated Cum Laude in 2018 and I am super interested in Data Analytics roles focused on the Financial Industry. 
+
+(*) Fun fact about myself: I love stargazing, and I am a self-taught drummer.
 
 (*) :dart: This is a portfolio created to display my technical and visualization skills on Python, SQL and Tableau.
 # "Financial_Data_Info.py" 
