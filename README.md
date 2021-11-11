@@ -49,5 +49,7 @@ https://user-images.githubusercontent.com/23235947/139759192-da1bb3d6-2093-47ff-
 
 **The intention of this analysis is for investors to have a clear understanding of how the investment in debt securities has changed over time since 1947. The data source for this project was imported from an excel file with over 12k rows of data obtained from the World Bank Database.**
 
+The full workbook can be found [here](https://public.tableau.com/views/World_Bank_Bonds/Cover?:language=en-US&:display_count=n&:origin=viz_share_link)
+
 ![tabpublic_nTouzZ5gRy](https://user-images.githubusercontent.com/23235947/141209034-3cf3cc84-bbf7-441d-95ae-7305f5f76a47.png)
 
