@@ -14,16 +14,16 @@
 
 **This is a program I wrote to obtain financial data from Yahoo Finance using Python, pandas, matplotlib, numpy and more.**
 
-- :point_right: The intention is for user to enter a valid ticker (verified by a function that only accepts alphabetical characters)
-- :point_right: Followed by user input for both start and end date (user must follow the Y-M-D format)
+- :point_right: The objective is for users to enter a valid ticker (verified by a function that only accepts alphabetical characters)
+- :point_right: Followed by user inputs for both start and end date (user must follow the Y-M-D format)
 - :green_book: Additionally, the program will create a DataFrame for the first 10 rows of data obtained and perform two quick calculations based on adjusted return
   - :dart: Simple return is then calculated using numpy (as percentage change)
   - :dart: Then, log return is calculated using numpy as the division between adj_close and prior adj_close values
-- :page_facing_up: The program will then continue output major institutional holders and recommendations for the ticker/stock provided, followed by line charts for all values in DataFrame created
+- :page_facing_up: The program will then proceed to output major institutional holders and historical recommendations for the ticker/stock provided, followed by line charts for all values in DataFrame created
 - :chart_with_upwards_trend: The program will also create plots for the new columns created (simple return and log return)
 
-- Additional:
-  - :chart_with_upwards_trend: At the end, the program will also display a visualization of daily YIELD CURVE RATES for 2021 and for current Month. This information is obtained by doing webscraping on the U.S. Departmen of Treasury using Pandas.
+- Additional Feature:
+  - :chart_with_upwards_trend: At the end, the program will also display a visualization of daily YIELD CURVE RATES for 2021 and for current Month. This information is obtained by performing webscraping using Pandas library on the U.S. Department of Treasury.
 
 https://user-images.githubusercontent.com/23235947/139759192-da1bb3d6-2093-47ff-967f-5fde5a34c0e1.mp4
 
