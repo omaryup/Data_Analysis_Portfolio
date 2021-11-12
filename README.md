@@ -25,6 +25,10 @@
 - Additional Feature:
   - :chart_with_upwards_trend: At the end, the program will also display a visualization of daily YIELD CURVE RATES for 2021 and for current Month. This information is obtained by performing webscraping using Pandas library on the U.S. Department of Treasury.
 
+<p align="center">
+    >>> Hit play below to see the program in action! <<<                                                   
+</p>
+
 https://user-images.githubusercontent.com/23235947/139759192-da1bb3d6-2093-47ff-967f-5fde5a34c0e1.mp4
 
 # "Semiconductor_financials_compare.sql" 
