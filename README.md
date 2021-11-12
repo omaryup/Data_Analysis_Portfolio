@@ -26,7 +26,11 @@
   - :chart_with_upwards_trend: At the end, the program will also display a visualization of daily YIELD CURVE RATES for 2021 and for current Month. This information is obtained by performing webscraping using Pandas library on the U.S. Department of Treasury.
 
 <p align="center">
-    >>> Hit play below to see the program in action! <<<                                                   
+  >>> Hit play below to see the program in action! <<<
+</p>
+
+<p align="center">
+  (maximize window for a better view)
 </p>
 
 https://user-images.githubusercontent.com/23235947/141530341-7854c2ed-b488-457c-8db8-9f6840fc7ae8.mp4
