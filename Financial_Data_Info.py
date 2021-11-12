@@ -7,7 +7,7 @@ from matplotlib.dates import MonthLocator
 import seaborn as sns
 
 #Set-up environment
-
+pd.set_option('display.float_format', '{:,.2f}'.format)
 pd.set_option('display.width', 500)
 pd.set_option('display.max_columns', 55)
 pd.set_option('display.max_rows', 500)
@@ -69,9 +69,9 @@ df.index.names = ['Dates'] #renames the index
 stock_info = yf_ticker.info
 df_stock_info = pd.DataFrame(stock_info.items(), columns=['Description', 'Details']) #all stock info
 
-income_statement_a = yf_ticker.financials
-balance_sheet_a = yf_ticker.balance_sheet
-cash_flow_a = yf_ticker.cashflow
+income_statement_a = yf_ticker.financials.round(decimals=3)
+balance_sheet_a = yf_ticker.balance_sheet.round(decimals=3)
+cash_flow_a = yf_ticker.cashflow.round(decimals=3)
 
 #Calculations added to DataFrame
 df['simple_rtn'] = df.adj_close.pct_change()
