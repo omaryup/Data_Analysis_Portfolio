@@ -29,7 +29,7 @@
     >>> Hit play below to see the program in action! <<<                                                   
 </p>
 
-https://user-images.githubusercontent.com/23235947/139759192-da1bb3d6-2093-47ff-967f-5fde5a34c0e1.mp4
+https://user-images.githubusercontent.com/23235947/141530341-7854c2ed-b488-457c-8db8-9f6840fc7ae8.mp4
 
 # "Semiconductor_financials_compare.sql" 
 
