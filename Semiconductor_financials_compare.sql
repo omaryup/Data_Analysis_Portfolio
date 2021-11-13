@@ -36,17 +36,8 @@ Research_and_Development_Exp int,
 Other_Exp int,
 Restructuring_Charges int)*/
 
-/*ALTER TABLE dbo.Common_size_IS
-ALTER COLUMN Revenue INT NULL*/
-
-/*INSERT INTO Common_size_IS (Ticker, Company, Year)
-VALUES ('AMAT', 'Applied Materials', 2020)*/
-
-/*delete from Semiconductors_financials.dbo.Common_size_IS
-where Ticker is Null*/
-
-INSERT INTO Semiconductors_financials.dbo.Common_size_IS (Ticker)
-VALUES ('AMAT')
+/*INSERT INTO Semiconductors_financials.dbo.Common_size_IS (Ticker)
+VALUES ('AMAT')*/
 
 UPDATE Semiconductors_financials.dbo.Common_size_IS
 SET Company = 'Applied Materials'
@@ -73,6 +64,7 @@ VALUES ('LRCX')*/
 UPDATE Semiconductors_financials.dbo.Common_size_IS
 SET Company = 'Lam Research'
 WHERE Ticker = 'LRCX'
+
 UPDATE Semiconductors_financials.dbo.Common_size_IS
 SET	Year = 2020
 WHERE Ticker = 'LRCX'
@@ -106,7 +98,10 @@ SET	Restructuring_Charges = 0
 WHERE Ticker = 'LRCX'
 
 ALTER TABLE Semiconductors_financials.dbo.Common_size_IS
-ADD COGS_percent VARCHAR(50)
+ADD COGS_percent decimal(10,2)
+
+
+/* Calculating common size values*/ 
 
 USE Semiconductors_financials
 GO
