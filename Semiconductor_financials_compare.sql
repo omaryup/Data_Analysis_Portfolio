@@ -104,3 +104,13 @@ AND Ticker = 'LRCX'
 UPDATE Semiconductors_financials.dbo.Common_size_IS
 SET	Restructuring_Charges = 0
 WHERE Ticker = 'LRCX'
+
+ALTER TABLE Semiconductors_financials.dbo.Common_size_IS
+ADD COGS_percent VARCHAR(50)
+
+USE Semiconductors_financials
+GO
+
+UPDATE Semiconductors_financials.dbo.Common_size_IS
+SET COGS_percent = CAST(ROUND(COGS * 100.0 / Revenue, 2) as decimal(10,2))
+
