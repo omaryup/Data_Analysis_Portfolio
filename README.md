@@ -42,17 +42,15 @@ https://user-images.githubusercontent.com/23235947/141530341-7854c2ed-b488-457c-
 ### 🔍 Visualizing all tables in Database
 
 - We can see this Database contains the main Financial Statements for a total of 6 public companies in the Semiconductor industry.
-- The intention of the query is to consolidate the data by year and construct a new table using fundamental analysis to obtain key stats in the industry.
+- The intention of the query is to consolidate the data by Ticker and Year and construct a common size Income Statement for each Company.
+- Using the **CREATE**, **INSERT**, **INTO**, **UPDATE** AND **WHERE** functions the SQL script performs the following actions:
+    - Pulls all Schemas available in Database
+    - Followed by a selection of tables being used
+    - The script then proceeds to Create the common size Income Statement table by defining Primary Key, Columns and data types.
+    - Following lines of code add values pulled from other tables.
+    - Finally, calculations are made and added to the newly created table.
 
-![Ssms_qKzSFNmDjs](https://user-images.githubusercontent.com/23235947/140806980-1d792476-d7c0-44d8-a61b-757dd0b5ac86.png)
-
-### Visualizing all tables in Database
-
-- In this next section, we can see that we are only selecting the latest reports (2020) and creating a simple 'Common size Income Statement'. Using CREATE, INSERT, INTO, UPDATE AND WHERE functions to add data to the newly created table.
-
-![Ssms_69F0ZUke46](https://user-images.githubusercontent.com/23235947/141649495-00bd6567-efe6-47fa-9f94-a831f4b12f8d.png)
-
-
+![Ssms_d2S0MxcjII](https://user-images.githubusercontent.com/23235947/141656219-4d051758-4dbd-40c6-99db-8e7f689bbc00.png)
 
 ### 📊 "BRD 1947 - PRESENT (TABLEAU)" 
 
