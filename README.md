@@ -48,9 +48,10 @@ https://user-images.githubusercontent.com/23235947/141530341-7854c2ed-b488-457c-
 
 ### Visualizing all tables in Database
 
-- In this next section, we can see that we are only selecting the latest reports. For this company in particular, we see the most recent annual report (before 2021) was released in Oct 2020.
+- In this next section, we can see that we are only selecting the latest reports (2020) and creating a simple 'Common size Income Statement'. Using CREATE, INSERT, INTO, UPDATE AND WHERE functions to add data to the newly created table.
 
-![Ssms_1xf6VGDH7b](https://user-images.githubusercontent.com/23235947/140814154-bdbd9284-5e57-4a07-97bd-a5ce498c4303.png)
+![Ssms_69F0ZUke46](https://user-images.githubusercontent.com/23235947/141649495-00bd6567-efe6-47fa-9f94-a831f4b12f8d.png)
+
 
 
 ### 📊 "BRD 1947 - PRESENT (TABLEAU)" 
