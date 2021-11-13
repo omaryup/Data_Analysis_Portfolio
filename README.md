@@ -44,8 +44,8 @@ https://user-images.githubusercontent.com/23235947/141530341-7854c2ed-b488-457c-
 - We can see this Database contains the main Financial Statements for a total of 6 public companies in the Semiconductor industry.
 - The intention of the query is to consolidate the data by Ticker and Year and construct a common size Income Statement for each Company.
 - Using the **CREATE**, **INSERT**, **INTO**, **UPDATE** AND **WHERE** functions the SQL script performs the following actions:
-    - Pulls all Schemas available in Database
-    - Followed by a selection of tables being used
+    - Pulls all Schemas available in Database.
+    - Followed by a selection of tables being used.
     - The script then proceeds to Create the common size Income Statement table by defining Primary Key, Columns and data types.
     - Following lines of code add values pulled from other tables.
     - Finally, calculations are made and added to the newly created table.
