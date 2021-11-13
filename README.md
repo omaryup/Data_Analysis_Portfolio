@@ -48,7 +48,7 @@ https://user-images.githubusercontent.com/23235947/141530341-7854c2ed-b488-457c-
     - Followed by a selection of tables being used.
     - The script then proceeds to Create the common size Income Statement table by defining Primary Key, Columns and data types.
     - Following lines of code add values pulled from other tables.
-    - Finally, calculations are made and added to the newly created table.
+    - Finally, calculations are made and added to the newly created table showing in percentage form with only two decimals.
 
 ![Ssms_d2S0MxcjII](https://user-images.githubusercontent.com/23235947/141656219-4d051758-4dbd-40c6-99db-8e7f689bbc00.png)
 
