@@ -68,7 +68,7 @@ The full Tableau workbook can be found [here](https://public.tableau.com/views/W
 UNIQUE_ID is created
 ![Ssms_FUKU1wPu90](https://user-images.githubusercontent.com/23235947/141686714-25d3d5f5-0f4f-48c0-8f1f-27d344b07b07.png)
 
-Country, Code, and Series are added to master table based **ON UNIQUE_ID JOIN**
+Country, Code, and Series are added to master table based on UNIQUE_ID **JOIN**
 ![Ssms_4XE0k5y6TO](https://user-images.githubusercontent.com/23235947/141686741-86ccf745-13cd-4819-906f-fc408652938c.png)
 
 ### :bulb: Final Result
