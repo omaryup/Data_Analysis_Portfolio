@@ -76,6 +76,11 @@ Country, Code, and Series are added to master table based on UNIQUE_ID **JOIN**
 - The UNIQUE_ID is a concatenation of both Country Codes and Series Codes. These datafields were identified as unique for each series and country, however when placed together, they would serve as unique identifier for each country and series.
 - Main Functions used on query:
    - **CREATE, SELECT, ORDER BY, JOIN, INSERT INTO, ADD, UPDATE, and SET**.
+ 
+ ### :bangbang: Handling NULL values
+ - Given the Data originated from a third party (World Bank Data), and contains information collected for over 50 years. It is logical that some of the values will be NULL. 
+ - In order to keep it as accurate as possible, NULLS will be left in place, however, when performing analysis, NULLS will be considered and described if needed.
+ - For the purposes of the cleaning of data performed above, NULLS are left in place.
 
 ![Ssms_m0saBT1aVM](https://user-images.githubusercontent.com/23235947/141686700-dae25629-a66e-4005-9d3d-5aca64669d29.png)
 
