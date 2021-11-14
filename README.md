@@ -1,6 +1,6 @@
 ## 👋 Hi, and welcome! 👋  
 
-(*) I am a Finance major with over 3 years of experience in Asset Management and trade settlement Operations. I have experience supporting different businesses such as Fixed Income, Real Estate, and Retirement. 
+(*) My name is Omar Yupanqui, I am a Finance major with over 3 years of experience in Asset Management and trade settlement Operations. I have experience supporting different businesses such as Fixed Income, Real Estate, and Retirement. 
 
 (*) I am highly interested in pursuing a career in Data and passionate about technology, and its applications to finance. 
 
