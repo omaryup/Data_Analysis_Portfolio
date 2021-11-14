@@ -52,7 +52,7 @@ The full Tableau workbook can be found [here](https://public.tableau.com/views/W
 **In this section, the SQL script will be used to clean data previously loaded into SQL Server using excel files (4 csv files total added to this repository).**
 
 
-### 🔍 Cleaning & Joining of Data
+### :bulb: Cleaning & Joining of Data
 
 - Before cleaning data in SQL, the csv files had to be formatted in excel individually. This was needed to avoid the SQL server import wizard from creating errors. The formatting on csv files included the following actions:
     - Replacing ',' in the "Series Name" cells (due to delimiter functionality on SQL server import wizard).
