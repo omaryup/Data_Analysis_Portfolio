@@ -35,6 +35,14 @@
 
 https://user-images.githubusercontent.com/23235947/141530341-7854c2ed-b488-457c-8db8-9f6840fc7ae8.mp4
 
+### 📊 "BRD 1947 - PRESENT (TABLEAU)" 
+
+**The intention of this analysis is for investors to have a clear understanding of how the investment in debt securities has changed over time since 1947. The data source for this project was imported from an excel file with over 12k rows of data obtained from the World Bank Database.**
+
+The full Tableau workbook can be found [here](https://public.tableau.com/views/World_Bank_Bonds/Cover?:language=en-US&:display_count=n&:origin=viz_share_link)
+
+![tabpublic_nTouzZ5gRy](https://user-images.githubusercontent.com/23235947/141209034-3cf3cc84-bbf7-441d-95ae-7305f5f76a47.png)
+
 
 # "World_Dev_ind (383k ROWS)" 
 
@@ -71,9 +79,6 @@ Country, Code, and Series are added to master table
 
 ![Ssms_m0saBT1aVM](https://user-images.githubusercontent.com/23235947/141686700-dae25629-a66e-4005-9d3d-5aca64669d29.png)
 
-
-
-
 # "Semiconductor_financials_compare.sql" 
 
 **In this section, the SQL script will be used to manipulate data previously loaded into SQL Server using excel files.**
@@ -90,12 +95,3 @@ Country, Code, and Series are added to master table
     - Finally, calculations are made and added to the newly created table showing in percentage form with only two decimals.
 
 ![Ssms_d2S0MxcjII](https://user-images.githubusercontent.com/23235947/141656219-4d051758-4dbd-40c6-99db-8e7f689bbc00.png)
-
-### 📊 "BRD 1947 - PRESENT (TABLEAU)" 
-
-**The intention of this analysis is for investors to have a clear understanding of how the investment in debt securities has changed over time since 1947. The data source for this project was imported from an excel file with over 12k rows of data obtained from the World Bank Database.**
-
-The full Tableau workbook can be found [here](https://public.tableau.com/views/World_Bank_Bonds/Cover?:language=en-US&:display_count=n&:origin=viz_share_link)
-
-![tabpublic_nTouzZ5gRy](https://user-images.githubusercontent.com/23235947/141209034-3cf3cc84-bbf7-441d-95ae-7305f5f76a47.png)
-
