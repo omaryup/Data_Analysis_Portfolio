@@ -35,6 +35,45 @@
 
 https://user-images.githubusercontent.com/23235947/141530341-7854c2ed-b488-457c-8db8-9f6840fc7ae8.mp4
 
+
+# "World_Dev_ind (383k ROWS)" 
+
+### A brief description of data used (from World Bank Data site):
+>World Development Indicators (WDI) is the primary World Bank collection of development indicators, compiled from officially recognized international sources. It presents the most current and accurate global development data available, and includes national, regional and global estimates. [Note: Even though Global Development Finance (GDF) is no longer listed in the WDI database name, all external debt and financial flows data continue to be included in WDI. The GDF publication has been renamed International Debt Statistics (IDS), and has its own separate database, as well.
+
+**In this section, the SQL script will be used to clean data previously loaded into SQL Server using excel files (4 csv files total added to this repository).**
+
+
+### 🔍 Cleaning & Joining of Data
+
+- Before cleaning data in SQL, the csv files had to be formatted in excel individually. This was needed to avoid the sql server import wizard from creating errors. The formatting on csv files included the following actions:
+    - Replacing ',' in the "Series Name" cells (due to delimiter functionality on SQL server import wizard).
+    - Changing the table name on YEAR columns e.g. from **2001[YR2001]** to **2001** (not changing the column names, would also cause errors while importing data).
+- Once the csv files were imported in SQL server, and DATABASE was created, the first step that took place was to visualize all tables imported and loaded in the new World_Dev_ind database using the **INFORMATION_SCHEMA.TABLES**.
+- The next step in the cleaning process was to delete any **NULL** valaues from the dataset. Given this is a large dataset, it was important that **NULL** values were discarded from the **Country Name** column, as this column will be later be used to create a **UNIQUE_ID** (Primary Key).
+- Next, additional functions were queried on the dataset to ensure all **NULL** values from the characteristics columns were discarded. That is, NULL values were deleted from the Country, Code, and Series columns.
+- Once these fields were cleaned. the UNIQUE_ID column was created. This was needed to later be used to JOIN all other tables to a master table.
+- Next, the master table is created. Given that the World Bank Data site only allows users to download a limited amount of rows per report, 4 different files (csv) were download. Each file contained 5 years of data for over 200 Countries.
+- After creating the master table, the UNIQUE_ID column is added. This will be used as a reference to add all other tables, particularly the YEAR columns from other tables.
+- Then, the YEAR columns are added based on the JOIN criteria matching the UNIQUE_ID from each of the tables. This ensured accuracy when joining all YEAR columns to the master table.
+
+UNIQUE_ID is created
+![Ssms_FUKU1wPu90](https://user-images.githubusercontent.com/23235947/141686714-25d3d5f5-0f4f-48c0-8f1f-27d344b07b07.png)
+
+Country, Code, and Series are added to master table
+![Ssms_4XE0k5y6TO](https://user-images.githubusercontent.com/23235947/141686741-86ccf745-13cd-4819-906f-fc408652938c.png)
+
+### 🔍 Final Result
+- The intention of the query is to consolidate the data found on the World Bank Data based on specific criteria such as the UNIQUE_ID. 
+- The UNIQUE_ID is a concatenation of both Country Codes and Series Codes. These datafields were identified as unique for each series and country, however when placed together, they would serve as unique identifier for each country and series.
+- Main Functions used on query:
+   - **CREATE, SELECT, ORDER BY, JOIN, INSERT INTO, ADD, UPDATE, and SET**.
+
+![Ssms_m0saBT1aVM](https://user-images.githubusercontent.com/23235947/141686700-dae25629-a66e-4005-9d3d-5aca64669d29.png)
+
+
+
+
 # "Semiconductor_financials_compare.sql" 
 
 **In this section, the SQL script will be used to manipulate data previously loaded into SQL Server using excel files.**
