@@ -35,7 +35,7 @@
 
 https://user-images.githubusercontent.com/23235947/141530341-7854c2ed-b488-457c-8db8-9f6840fc7ae8.mp4
 
-### 📊 "BRD 1947 - PRESENT (TABLEAU)" 
+### 📊 "IBRD 1947 - PRESENT (TABLEAU)" 
 
 **The intention of this analysis is for investors to have a clear understanding of how the investment in debt securities has changed over time since 1947. The data source for this project was imported from an excel file with over 12k rows of data obtained from the World Bank Database.**
 
