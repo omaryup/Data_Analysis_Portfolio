@@ -52,7 +52,7 @@ The full Tableau workbook can be found [here](https://public.tableau.com/views/W
 **In this section, the SQL script will be used to clean data previously loaded into SQL Server using excel files (4 csv files total added to this repository).**
 
 
-### :bulb: Cleaning & Joining of Data
+### :mag_right: Cleaning & Joining of Data
 
 - Before cleaning data in SQL, the csv files had to be formatted in excel individually. This was needed to avoid the SQL server import wizard from creating errors. The formatting on csv files included the following actions:
     - Replacing ',' in the "Series Name" cells (due to delimiter functionality on SQL server import wizard).
@@ -71,7 +71,7 @@ UNIQUE_ID is created
 Country, Code, and Series are added to master table
 ![Ssms_4XE0k5y6TO](https://user-images.githubusercontent.com/23235947/141686741-86ccf745-13cd-4819-906f-fc408652938c.png)
 
-### 🔍 Final Result
+### :bulb: Final Result
 - The intention of the query is to consolidate the data found on the World Bank Data based on specific criteria such as the UNIQUE_ID. 
 - The UNIQUE_ID is a concatenation of both Country Codes and Series Codes. These datafields were identified as unique for each series and country, however when placed together, they would serve as unique identifier for each country and series.
 - Main Functions used on query:
