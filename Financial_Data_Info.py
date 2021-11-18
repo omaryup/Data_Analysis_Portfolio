@@ -17,7 +17,7 @@ pd.set_option('display.max_rows', 500)
 def get_ticker(input):
     while True:
         ticker = input("Please enter Ticker Symbol: ")
-        if ticker.isalpha():
+        if not ticker.isnumeric():
             return ticker
             break
         else:
