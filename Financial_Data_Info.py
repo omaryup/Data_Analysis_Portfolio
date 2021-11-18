@@ -1,6 +1,6 @@
 import pandas as pd
 import numpy as np
-import yfinance as yf
+import yfinance as yf #version 0.1.65
 from matplotlib import pyplot as plt
 from datetime import datetime
 from matplotlib.dates import MonthLocator
