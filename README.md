@@ -49,7 +49,7 @@ The full Tableau workbook can be found [here](https://public.tableau.com/views/W
 ### A brief description of data used (from World Bank Data site):
 >World Development Indicators (WDI) is the primary World Bank collection of development indicators, compiled from officially recognized international sources. It presents the most current and accurate global development data available, and includes national, regional and global estimates. [Note: Even though Global Development Finance (GDF) is no longer listed in the WDI database name, all external debt and financial flows data continue to be included in WDI. The GDF publication has been renamed International Debt Statistics (IDS), and has its own separate database, as well.
 
-**In this section, the SQL script will be used to clean data previously loaded into SQL Server using excel files (4 csv files total added to this repository).**
+**In this section, the SQL script will be used to clean data previously loaded into SQL Server using excel files (4 csv files used can be found in this repository).**
 
 
 ### :mag_right: Cleaning & Joining of Data
