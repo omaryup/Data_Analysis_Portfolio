@@ -54,16 +54,16 @@ The full Tableau workbook can be found [here](https://public.tableau.com/views/W
 
 ### :mag_right: Cleaning & Joining of Data
 
-- Before cleaning data in SQL, the csv files had to be formatted in excel individually. This was needed to avoid the SQL server import wizard from creating errors. The formatting on csv files included the following actions:
+- :warning: Before cleaning data in SQL, the csv files had to be formatted in excel individually. This was needed to avoid the SQL server import wizard from creating errors. The formatting on csv files included the following actions:
     - Replacing ',' in the "Series Name" cells (due to delimiter functionality on SQL server import wizard).
     - Changing the table name on YEAR columns e.g. from **2001[YR2001]** to **2001** (not changing the column names, would also cause errors while importing data).
-- Once the csv files were imported in SQL server, and DATABASE was created, the first step that took place was to visualize all tables imported and loaded in the new World_Dev_ind database using the **INFORMATION_SCHEMA.TABLES**.
-- The next step in the cleaning process was to delete any **NULL** values from the dataset. Given this is a large dataset, it was important that **NULL** values were discarded from the **Country Name** column, as this column will be later be used to create a **UNIQUE_ID** (Primary Key).
-- Next, additional functions were queried on the dataset to ensure all **NULL** values from the characteristics columns were discarded. That is, NULL values were deleted from the Country, Code, and Series columns.
-- Once these fields were cleaned. the **UNIQUE_ID** column was created. This was needed to later be used to JOIN all other tables to a master table.
-- Next, the master table is created. Given that the World Bank Data site only allows users to download a limited number of rows per report, 4 different files (csv) were downloaded. Each file contained 5 years worth of data for over 200 Countries.
-- After creating the master table, the **UNIQUE_ID** column is added. This will be used as a reference to add all other tables, particularly the YEAR columns from other tables.
-- Then, the YEAR columns are added based on the **JOIN** criteria matching the **UNIQUE_ID** from each of the tables. This ensured accuracy when joining all YEAR columns to the master table.
+- :heavy_check_mark: Once the csv files were imported in SQL server, and DATABASE was created, the first step that took place was to visualize all tables imported and loaded in the new World_Dev_ind database using the **INFORMATION_SCHEMA.TABLES**.
+- :heavy_check_mark: The next step in the cleaning process was to delete any **NULL** values from the dataset. Given this is a large dataset, it was important that **NULL** values were discarded from the **Country Name** column, as this column will be later be used to create a **UNIQUE_ID** (Primary Key).
+- :heavy_check_mark: Next, additional functions were queried on the dataset to ensure all **NULL** values from the characteristics columns were discarded. That is, NULL values were deleted from the Country, Code, and Series columns.
+- :heavy_check_mark: Once these fields were cleaned. the **UNIQUE_ID** column was created. This was needed to later be used to JOIN all other tables to a master table.
+- :heavy_check_mark: Next, the master table is created. Given that the World Bank Data site only allows users to download a limited number of rows per report, 4 different files (csv) were downloaded. Each file contained 5 years worth of data for over 200 Countries.
+- :heavy_check_mark:After creating the master table, the **UNIQUE_ID** column is added. This will be used as a reference to add all other tables, particularly the YEAR columns from other tables.
+- :heavy_check_mark:Then, the YEAR columns are added based on the **JOIN** criteria matching the **UNIQUE_ID** from each of the tables. This ensured accuracy when joining all YEAR columns to the master table.
 
 UNIQUE_ID is created
 ![Ssms_FUKU1wPu90](https://user-images.githubusercontent.com/23235947/141686714-25d3d5f5-0f4f-48c0-8f1f-27d344b07b07.png)
