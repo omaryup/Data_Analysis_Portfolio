@@ -14,7 +14,7 @@
 
 **This is a program I wrote to obtain financial data from Yahoo Finance using Python, pandas, matplotlib, numpy and more.**
 
-- :point_right: The objective is for users to enter a valid ticker (verified by a function that only accepts alphabetical characters)
+- :point_right: The objective is for users to enter a valid ticker (verified by a function that only accepts alphabetical and special characters, numbers are excluded and will display a message if added to the ticker)
 - :point_right: Followed by user inputs for both start and end date (user must follow the YYYY-MM-DD format)
 - :green_book: Additionally, the program will create a DataFrame for the first 10 rows of data obtained and perform two quick calculations based on adjusted return
   - :dart: Simple return is then calculated using numpy (as percentage change)
