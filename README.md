@@ -33,7 +33,7 @@
   (maximize window for a better view)
 </p>
 
-https://user-images.githubusercontent.com/23235947/141530341-7854c2ed-b488-457c-8db8-9f6840fc7ae8.mp4
+https://user-images.githubusercontent.com/23235947/143153662-1aa21a94-b3f1-402e-bec6-4060077d5d07.mp4
 
 ### 📊 "IBRD 1947 - PRESENT (TABLEAU)" 
 
