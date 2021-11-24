@@ -58,6 +58,10 @@ major_holders = yf_ticker.major_holders
 inst_holders = yf_ticker.institutional_holders
 recommendation = yf_ticker.recommendations
 
+#Calling recommendations ONLY for date rage entered by user
+
+recommendation = recommendation.loc[str(start_date):str(end_date)]
+
 #Converting downloaded data to DataFrame using Pandas
 df = pd.DataFrame(data)
 df.rename(columns={'Adj Close':'adj_close'}, inplace=True)
