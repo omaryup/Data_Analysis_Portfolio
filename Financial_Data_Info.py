@@ -140,7 +140,7 @@ print(df.head(10)) #dataset
 print("\n")
 print(inst_holders) #dataset
 print("\n")
-print(recommendation.head()) #dataset
+print(recommendation.head(20)) #dataset
 print("\n")
 print(recom_count) #dataset
 print("\n")
