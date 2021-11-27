@@ -113,11 +113,13 @@ plt.show()
 
 # creating dataframe from US Treas urls
 treas_2021 = pd.read_html(
-    "https://www.treasury.gov/resource-center/data-chart-center/interest-rates/pages/TextView.aspx?data=yieldYear&year=2021",
-    header=0, index_col=0)[1]  # we use header and index col to crate Date and col index for dataframe
+    "https://www.treasury.gov/resource-center/data-chart-center/interest-rates/pages/TextView.aspx?data=yieldYear"
+    "&year=2021",
+    header=0, index_col=0)[1]  # Header and index col are used to crate Date and col index for dataframe
 treas_month = \
-pd.read_html("https://www.treasury.gov/resource-center/data-chart-center/interest-rates/pages/TextView.aspx?data=yield",
-             header=0, index_col=0)[1]  # we use header and index col to crate Date and col index for dataframe
+    pd.read_html(
+        "https://www.treasury.gov/resource-center/data-chart-center/interest-rates/pages/TextView.aspx?data=yield",
+        header=0, index_col=0)[1]  # Header and index col are used to crate Date and col index for dataframe
 
 # plotting for 2021
 fig, ax1 = plt.subplots(figsize=(25, 15))
