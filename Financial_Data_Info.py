@@ -121,6 +121,9 @@ treas_month = \
         "https://www.treasury.gov/resource-center/data-chart-center/interest-rates/pages/TextView.aspx?data=yield",
         header=0, index_col=0)[1]  # Header and index col are used to crate Date and col index for dataframe
 
+# selecting the last business day rates
+treas_month_dates = treas_month.iloc[-1:]
+
 # plotting for 2021
 fig, ax1 = plt.subplots(figsize=(25, 15))
 ax1.plot(treas_2021)
@@ -140,6 +143,14 @@ plt.xticks(rotation=30)
 plt.legend(treas_month.columns, bbox_to_anchor=(1.06, 1), loc='upper right')
 ax2.set_ylabel('Yield rates')
 ax2.set_xlabel('Date')
+plt.show()
+
+# plotting the yield curve for last business date
+fig, ax3 = plt.subplots(figsize=(25, 15))
+ax3.set_title('Last Business Day - Yield Curve')
+ax3.plot(treas_month_dates.T)
+ax3.set_ylabel('Rates')
+ax3.set_xlabel('Maturity')
 plt.show()
 
 # Printing
