@@ -12,7 +12,6 @@ pd.set_option('display.width', 500)
 pd.set_option('display.max_columns', 55)
 pd.set_option('display.max_rows', 500)
 
-
 # Set-up data needed for analysis
 
 def get_ticker(user_input):
@@ -36,7 +35,6 @@ def get_start_date(start_date_input):
         except ValueError:
             print("This is the incorrect date format. It should be YYYY-mm-dd")
 
-
 def get_end_date(end_date_input):
     end_date_format = "%Y-%m-%d"
     while True:
@@ -47,7 +45,6 @@ def get_end_date(end_date_input):
             break
         except ValueError:
             print("This is the incorrect date format. It should be YYYY-mm-dd")
-
 
 # Calling functions defined above
 ticker = get_ticker(input)
@@ -85,29 +82,8 @@ cash_flow_a = yf_ticker.cashflow.round(decimals=3)
 df['simple_rtn'] = df.adj_close.pct_change()
 df['log_rtn'] = np.log(df.adj_close / df.adj_close.shift(1))
 
+# Counting recommendations
 recommendation_count = recommendation['To Grade'].value_counts()
-
-# Plots and Graphs
-df.plot(figsize=(24, 12), subplots=True)
-plt.legend()
-plt.show()
-
-plt.figure(figsize=(12, 10))
-ax = plt.subplot(1, 1, 1)
-df['adj_close'].plot()
-ax.set(title=ticker + ' time series', xlabel='Date', ylabel='Stock price ($)')
-plt.legend()
-plt.show()
-
-plt.figure(figsize=(12, 10))
-df['simple_rtn'].plot(figsize=(12, 10))
-plt.legend()
-plt.show()
-
-plt.figure(figsize=(12, 10))
-df['log_rtn'].plot(figsize=(12, 10))
-plt.legend()
-plt.show()
 
 # Daily Treasury Yield curve rates
 
@@ -124,33 +100,61 @@ treas_month = \
 # selecting the last business day rates
 treas_month_dates = treas_month.iloc[-1:]
 
-# plotting for 2021
-fig, ax1 = plt.subplots(figsize=(25, 15))
+# Plotting Stock Data
+df.plot(figsize=(24, 12), subplots=True)
+plt.legend()
+plt.show()
+
+plt.figure(figsize=(12, 10))
+ax = plt.subplot(1, 1, 1)
+df['adj_close'].plot()
+ax.set(title=ticker + ' time series', xlabel='Date', ylabel='Stock price ($)', fontsize=30)
+plt.legend()
+plt.show()
+
+plt.figure(figsize=(12, 10))
+df['simple_rtn'].plot(figsize=(12, 10))
+plt.legend()
+plt.show()
+
+plt.figure(figsize=(12, 10))
+df['log_rtn'].plot(figsize=(12, 10))
+plt.legend()
+plt.show()
+
+# Plotting Treasury Data
+fig1, ax1 = plt.subplots(figsize=(25, 15))
+plt.xticks(fontsize=20)
+plt.yticks(fontsize=20)
 ax1.plot(treas_2021)
-ax1.set_title('Daily Treasury Yield Curves Rates for 2021')
+ax1.set_title('Daily Treasury Yield Curves Rates for 2021', fontsize=30)
 ax1.xaxis.set_major_locator(MonthLocator())
 plt.xticks(rotation=30)
 plt.legend(treas_2021.columns, bbox_to_anchor=(1.06, 1), loc='upper right')
-ax1.set_ylabel('Yield rates')
-ax1.set_xlabel('Date')
+ax1.set_ylabel('Yield rates', fontsize=30)
+ax1.set_xlabel('Date', fontsize=30)
 plt.show()
 
 # plotting for month
-fig, ax2 = plt.subplots(figsize=(25, 15))
+fig2, ax2 = plt.subplots(figsize=(25, 15))
+plt.xticks(fontsize=20)
+plt.yticks(fontsize=20)
 ax2.plot(treas_month)
-ax2.set_title('Daily Treasury Yield Curves Rates for Current Month')
+ax2.set_title('Daily Treasury Yield Curves Rates for Current Month', fontsize=30)
 plt.xticks(rotation=30)
 plt.legend(treas_month.columns, bbox_to_anchor=(1.06, 1), loc='upper right')
-ax2.set_ylabel('Yield rates')
-ax2.set_xlabel('Date')
+ax2.set_ylabel('Yield rates', fontsize=30)
+ax2.set_xlabel('Date', fontsize=30)
 plt.show()
 
 # plotting the yield curve for last business date
-fig, ax3 = plt.subplots(figsize=(25, 15))
-ax3.set_title('Last Business Day - Yield Curve')
+fig3, ax3 = plt.subplots(figsize=(25, 15))
+plt.xticks(fontsize=20)
+plt.yticks(fontsize=20)
+ax3.set_title('Last Business Day - Yield Curve', fontsize=30)
 ax3.plot(treas_month_dates.T)
-ax3.set_ylabel('Rates')
-ax3.set_xlabel('Maturity')
+ax3.set_ylabel('Rates', fontsize=30)
+ax3.set_xlabel('Maturity', fontsize=30)
 plt.show()
 
 # Printing
