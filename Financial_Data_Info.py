@@ -12,7 +12,9 @@ pd.set_option('display.width', 500)
 pd.set_option('display.max_columns', 55)
 pd.set_option('display.max_rows', 500)
 
+
 # Set-up data needed for analysis
+
 
 def get_ticker(user_input):
     while True:
@@ -35,6 +37,7 @@ def get_start_date(start_date_input):
         except ValueError:
             print("This is the incorrect date format. It should be YYYY-mm-dd")
 
+
 def get_end_date(end_date_input):
     end_date_format = "%Y-%m-%d"
     while True:
@@ -45,6 +48,7 @@ def get_end_date(end_date_input):
             break
         except ValueError:
             print("This is the incorrect date format. It should be YYYY-mm-dd")
+
 
 # Calling functions defined above
 ticker = get_ticker(input)
@@ -108,7 +112,10 @@ plt.show()
 plt.figure(figsize=(12, 10))
 ax = plt.subplot(1, 1, 1)
 df['adj_close'].plot()
-ax.set(title=ticker + ' time series', xlabel='Date', ylabel='Stock price ($)', fontsize=30)
+ax.set_title(ticker + ' time series', fontsize=30)
+ax.set(xlabel='Date', ylabel='Stock price ($)')
+ax.xaxis.label.set_size(18)
+ax.yaxis.label.set_size(18)
 plt.legend()
 plt.show()
 
