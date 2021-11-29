@@ -105,7 +105,9 @@ treas_month = \
 treas_month_dates = treas_month.iloc[-1:]
 
 # Plotting Stock Data
-df.plot(figsize=(24, 12), subplots=True)
+df.plot(figsize=(24, 12), subplots=True, sharex=True, sharey=False, grid=True)
+plt.suptitle('Historical Prices', fontsize=20)
+plt.xlabel('Date', fontsize=20)
 plt.legend()
 plt.show()
 
