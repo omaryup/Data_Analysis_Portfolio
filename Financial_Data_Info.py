@@ -67,7 +67,7 @@ recommendation = yf_ticker.recommendations
 
 recommendation = recommendation.loc[str(start_date):str(end_date)]
 
-# Converting downloaded data to DataFrame using Pandas
+# Converting downloaded data to DataFrame using Pandas package
 df = pd.DataFrame(data)
 df.rename(columns={'Adj Close': 'adj_close'}, inplace=True)
 new_col = ['Open', 'High', 'Low', 'Close', 'Volume', 'adj_close', 'simple_rtn',
