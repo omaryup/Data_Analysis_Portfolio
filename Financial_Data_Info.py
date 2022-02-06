@@ -92,14 +92,28 @@ recommendation_count = recommendation['To Grade'].value_counts()
 # Daily Treasury Yield curve rates
 
 # creating dataframe from US Treas urls
-treas_2021 = pd.read_html(
-    "https://www.treasury.gov/resource-center/data-chart-center/interest-rates/pages/TextView.aspx?data=yieldYear"
-    "&year=2021",
-    header=0, index_col=0)[1]  # Header and index col are used to crate Date and col index for dataframe
+
+treas_2022 = pd.read_html(
+    "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2022",
+    header=0, index_col=0)[0] # no change from 2021, however, pandas is now picking up additional columns from HTML so I had to add the below to use the correct columns
+
+# below code excludes unnecessary columns between index 0 - 6 and only shows the 1mo - 30yr yields
+cols = [0,1,2,3,4,5,6]
+treas_2022.drop(treas_2022.columns[cols],axis=1, inplace=True)
+
+# treas_2021 = pd.read_html(
+#     "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2022",
+#     header=0, index_col=0)[1]  # Header and index col are used to crate Date and col index for dataframe [updated with above on 2.6.22]
+
 treas_month = \
     pd.read_html(
-        "https://www.treasury.gov/resource-center/data-chart-center/interest-rates/pages/TextView.aspx?data=yield",
-        header=0, index_col=0)[1]  # Header and index col are used to crate Date and col index for dataframe
+        "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2022",
+        header=0, index_col=0)[0]  # Header and index col are used to crate Date and col index for dataframe [no changes on 2.6.22, other than df name and below for month]
+
+#below code was added on 2.6.22 to print only treasury rate columns
+cols = [0,1,2,3,4,5,6]
+treas_month.drop(treas_month.columns[cols],axis=1, inplace=True)
+
 
 # selecting the last business day rates
 treas_month_dates = treas_month.iloc[-1:]
@@ -135,11 +149,11 @@ plt.show()
 fig1, ax1 = plt.subplots(figsize=(25, 15))
 plt.xticks(fontsize=20)
 plt.yticks(fontsize=20)
-ax1.plot(treas_2021)
+ax1.plot(treas_2022)
 ax1.set_title('Daily Treasury Yield Curves Rates for 2021', fontsize=30)
 ax1.xaxis.set_major_locator(MonthLocator())
 plt.xticks(rotation=30)
-plt.legend(treas_2021.columns, bbox_to_anchor=(1.06, 1), loc='upper right')
+plt.legend(treas_2022.columns, bbox_to_anchor=(1.06, 1), loc='upper right')
 ax1.set_ylabel('Yield rates', fontsize=30)
 ax1.set_xlabel('Date', fontsize=30)
 plt.show()
@@ -176,7 +190,7 @@ print(recommendation.head(20))  # dataset
 print("\n")
 print(recommendation_count)  # dataset
 print("\n")
-print(treas_2021.head())  # dataset
+print(treas_2022.head())  # dataset
 print("\n")
 print(treas_month)  # dataset
 print("\n")
@@ -187,4 +201,3 @@ print("\n")
 print(balance_sheet_a)  # dataset
 print("\n")
 print(cash_flow_a)  # dataset
-
